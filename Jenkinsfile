@@ -9,11 +9,13 @@ environment {
 stages {
 
     stage('Build Docker Image') {
-        steps {
-            script {
-                docker.build("${IMAGE_NAME}:latest")
-            }
-        }
+    steps {
+        sh '''
+        export DOCKER_BUILDKIT=0
+        docker build -t ${IMAGE_NAME}:latest .
+        '''
+    }
+}
     }
 
     stage('Push Docker Image') {
