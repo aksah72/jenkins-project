@@ -12,7 +12,7 @@ git 'https://github.com/aksah72/jenkins-project.git'
 stage('Build Docker Image'){
 steps{
 script{
-docker.build("${IMAGE_NAME}:latest"}
+docker.build("${IMAGE_NAME}:latest")
 }
 }
 }
