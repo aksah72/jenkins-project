@@ -32,14 +32,11 @@ stages {
             docker stop myapp || true
             docker rm myapp || true
 
-            docker run -d \
-              --name myapp \
-              -p 3000:3000 \
-              ${IMAGE_NAME}:latest
+            docker run -d --name myapp -p 3000:3000 ${IMAGE_NAME}:latest
             '''
         }
     }
 }
-```
+
 
 }
