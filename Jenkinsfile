@@ -5,7 +5,7 @@ IMAGE_NAME="aksah22/jenkins-demo"
 }
 stages{
 stage('Clone Code'){
-step{
+steps{
 git 'https://github.com/aksah72/jenkins-project.git'
 }
 }
